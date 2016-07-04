@@ -1,0 +1,54 @@
+#booking {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $montserrat;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    h3 {
+        margin-bottom: 40px;
+    }
+
+    .container {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 1040px;
+        text-align: center;
+    }
+
+    .row-centered {
+        text-align: center;
+    }
+
+    .row {
+        margin-bottom: 20px;
+    }
+
+    .col-centered {
+        display: inline-block;
+        float: none;
+        text-align: left;
+        margin-right: -4px;
+    }
+
+    .jumbotron {
+        background: none;
+        padding-top: 0;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .navbar {
+        margin: 0;
+    }
+
+    .text-muted {
+        color: $black;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,80 @@
+<div id="house" ng-controller="focusController">
+    <div class="jumbotron text-center">
+        <h1>Tell us about your home.</h1>
+        <h3>Simply enter your address and we'll do the rest.</h3>
+
+        <form ng-submit="submitForm()">
+            <div class="row">
+                <div class="large-12">
+                    <span class="input" ng-class="{filled: focus}">
+                        <input class="input-field" type="text" id="house-input" ng-model="focus" ng-change="chosenPlace=focus" details="chosenPlaceDetails" placeholder="" googleplace />
+                        <label class="input-label" for="house-input">
+                            <span class="input-content">Enter your address</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="large-8 col-centered">
+                    <span class="input large-input filled-gray">
+                        <input class="input-field" type="text" id="address-input" ng-model="formData.search" ng-value="formData.search=chosenPlaceDetails.address_components[0].long_name + ' ' + chosenPlaceDetails.address_components[1].long_name" name="search" />
+                        <label class="input-label" for="address-input">
+                            <span class="input-content">Address</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="large-3 col-centered">
+                    <span class="input filled-gray">
+                        <input class="input-field" type="text" id="city-input" ng-model="formData.city" ng-value="formData.city=chosenPlaceDetails.address_components[2].long_name" name="city" />
+                        <label class="input-label" for="city-input">
+                            <span class="input-content">City</span>
+                        </label>
+                    </span>
+                </div>
+
+                <div class="large-3 col-centered">
+                    <span class="input filled-gray">
+                        <input class="input-field" type="text" id="state-input" ng-model="formData.state" ng-value="formData.state=chosenPlaceDetails.address_components[5].short_name" name="state" />
+                        <label class="input-label" for="state-input">
+                            <span class="input-content">State</span>
+                        </label>
+                    </span>
+                </div>
+
+                <div class="large-2 col-centered">
+                    <span class="input filled-gray">
+                        <input class="input-field" type="text" id="zip-input" ng-model="formData.zip" ng-value="formData.zip=chosenPlaceDetails.address_components[7].long_name" name="zip" />
+                        <label class="input-label" for="zip-input">
+                            <span class="input-content">Zip Code</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+            <input type="submit" value="Submit" name="submit">
+
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <p>{{customerInput.successMessage}}</p>
+                    <p>{{customerInput.errorMessage}}</p>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-2 col-centered sqftMessage">
+                    <input type="number" value="{{customerInput.totalSqFt}}" id="sqft" ng-model="customerInput.totalSqFt"/>
+                    <label for="sqft" class="sqft">sq/ft</label>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-2 col-centered">
+                    <div ng-show="customerInput.totalSqFt > 100" ng-click="submitForm()"><a href="#services"><button>Next</button></a></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

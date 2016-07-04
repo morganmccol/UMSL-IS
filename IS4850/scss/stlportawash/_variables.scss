@@ -1,0 +1,22 @@
+$montserrat: 'Montserrat', sans-serif;
+$open: 'Open Sans', sans-serif;
+$green: #08ae93;
+$gray: #bcbcbc;
+$black: #000000;
+$white: #ffffff;
+$muted: #f1f1f1;
+$muted-dark: #999;
+
+@mixin button {
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+@mixin hover {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}

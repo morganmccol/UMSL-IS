@@ -1,0 +1,17 @@
+#about {
+    .about-title {
+        padding: 5% 0 5% 0;
+    }
+
+    .about-features {
+        p {
+            text-align: left;
+        }
+
+        i {
+            font-size: 50px;
+            color: $green;
+            padding-bottom: 10px;
+        }
+    }
+}

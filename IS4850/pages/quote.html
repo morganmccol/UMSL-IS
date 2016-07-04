@@ -1,0 +1,59 @@
+<div id="quote">
+    <div class="jumbotron text-center">
+        <h1>Here's what we know so far.</h1>
+        <h3>You'll find your instant, personalized quote below.</h3>
+        <div ng-controller="quoteController as quoteCtrl">
+            <div class="container">
+                <div class="row row-centered">
+                    <div class="medium-9 col-centered">
+                        <p class="text-muted">
+                            You've given us the following information about your home ...
+                        </p>
+                        <p><b><u>{{quoteCtrl.customer.totalSqFt | number}}</u></b> sq/ft</p>
+                        <br />
+                        <p class="text-muted">
+                            And chosen these options ...
+                        </p>
+                    </div>
+                </div>
+                <div ng-controller="quoteController as quoteCtrl">
+                    <div ng-repeat="service in quoteCtrl.service">
+                        <div ng-show="service.selected">
+                            <div class="medium-4 columns">
+                                <div class="selection-highlights">
+                                    <input class="selection-checkbox" type="checkbox" id="selection-check-{{service.idName}}" ng-model="service.selected" ng-disabled="service.selected" />
+                                    <div class="selection-highlight"></div>
+                                </div>
+                                <div class="selection-content">
+                                    <label class="selection-item" for="selection-check-{{service.idName}}">
+                                        <span class="selection-item-container" ng-class="{green: select.patio }">
+                                            <i class="fa {{service.icon}}">
+                                            </i>
+                                            <br />{{service.name}}
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-centered clearfix">
+                        <div class="bubble">Your instant quote</div>
+                        <div class="box-border">{{quoteCtrl.customer.totalSqFt * 0.10 | currency}}</div>
+                        <form>
+                            <input type="text" placeholder="Promo code">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="0">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -6" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop" result="goo" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+</div>

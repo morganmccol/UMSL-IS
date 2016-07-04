@@ -1,0 +1,78 @@
+.contain-to-grid {
+    position: fixed;
+    z-index: 9999;
+    background: $white;
+    padding: 20px;
+}
+
+.top-bar {
+    background: none;
+
+    .name {
+        h1 {
+            text-transform: uppercase;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            font-size: 25px;
+            letter-spacing: 5px;
+            font-family: $montserrat;
+
+            a {
+                color: $green;
+                font-weight: bold;
+            }
+        }
+
+        a:hover {
+            color: $green;
+        }
+    }
+}
+
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+    border: none;
+}
+
+.top-bar-section ul li {
+    background: none;
+
+    a {
+        color: #000;
+    }
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: 1px;
+    font-family: $montserrat;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover,
+.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+    color: $gray;
+    background: none;
+}
+
+li.menu-item-48.menu-item-type-post_type.menu-item-object-page.menu-item-48 a:hover {
+    color: $gray;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+    color: $green;
+    background: none;
+}
+
+li.menu-item-48.menu-item-type-post_type.menu-item-object-page.menu-item-48 a {
+    color: $white;
+    background: $green;
+}

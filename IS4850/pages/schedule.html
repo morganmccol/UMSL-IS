@@ -1,0 +1,110 @@
+<div id="schedule" ng-controller="dateController as dateCtrl">
+    <div class="jumbotron text-center">
+        <h1>Find a time to schedule your wash.</h1>
+        <h3>Select from any of our available slots.</h3>
+
+        <div class="container clearfix">
+            <div class="row row-centered">
+                <div ng-repeat="weekday in dateCtrl.weekday">
+                    <div class="medium-2 columns">
+                        <div class="selection-highlights">
+                            <input class="selection-checkbox" type="checkbox" id="selection-check-{{weekday.dayId}}" name="{{weekday.dayName}}" ng-model="weekday.selected" />
+                            <div class="selection-highlight"></div>
+                        </div>
+                        <div class="selection-content">
+                            <label class="selection-item" for="selection-check-{{weekday.dayId}}">
+                                <span class="selection-item-container" ng-class="{green: select.monday}">
+                                    <p>{{weekday.dayName}}</p>
+                                    {{weekday.date}}
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="0">
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -6" result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" result="goo" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div ng-repeat="day in dateCtrl.weekday">
+            <div ng-show="day.selected">
+                <ul>
+                    <li ng-click="dateCtrl.selectDate(day.start8,day.end11)">{{day.start8}} - {{day.end11}}</li>
+                    <li ng-click="dateCtrl.selectDate(day.start11, day.end2)">{{day.start11}} - {{day.end2}}</li>
+                    <li ng-click="dateCtrl.selectDate(day.start2, day.end5)">{{day.start2}} - {{day.end5}}</li>
+                </ul>
+
+                <div>
+                    <p ng-show="dateCtrl.customerInput.startTime != undefined">You've selected <b>{{day.dayName}}</b> from <b><u>{{dateCtrl.customerInput.startTime + " - " + dateCtrl.customerInput.endTime + "."}}</u></b></p>
+                </div>
+            </div>
+        </div>
+
+        <form name="booking-form" ng-submit="bookingForm()" action="https://docs.google.com/forms/d/1ZNzhkcG7-fLso3SRxCVLOP5jrE3eLiN5yNZng40YBWw/formResponse" method="POST">
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <span class="input" ng-class="{filled: focusDate}">
+                        <input class="input-field" type="datetime-local" id="schedule-date-input" name="entry.127627252" value="" ng-model="focsuDate">
+                        <label class="input-label" for="schedule-date-input">
+                            <span class="input-content">Start Date</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <span class="input" ng-class="{filled: focusEndDate}">
+                        <input class="input-field" type="datetime-local" id="schedule-enddate-input" name="entry.902502736" value="" ng-model="focsuEndDate">
+                        <label class="input-label" for="schedule-enddate-input">
+                            <span class="input-content">End Date</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <span class="input" ng-class="{filled: focusName}">
+                        <input class="input-field" type="text" id="schedule-name-input" name="entry.1034240404" value="" ng-model="focusName">
+                        <label class="input-label" for="schedule-name-input">
+                            <span class="input-content">Full Name</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <span class="input" ng-class="{filled: focusEmail}">
+                        <input class="input-field" type="email" id="schedule-email-input" name="entry.1635810270" value="" ng-model="focusEmail">
+                        <label class="input-label" for="schedule-email-input">
+                            <span class="input-content">Email Address</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row row-centered">
+                <div class="medium-4 col-centered">
+                    <span class="input" ng-class="{filled: focusNumber}">
+                        <input class="input-field" type="tel" id="schedule-phone-input" name="entry.1841595798" value="" ng-model="focusNumber">
+                        <label class="input-label" for="schedule-phone-input">
+                            <span class="input-content">Phone Number</span>
+                        </label>
+                    </span>
+                </div>
+            </div>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+</div>

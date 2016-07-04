@@ -1,0 +1,88 @@
+body, html {
+    padding: 0;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+    background: $white;
+    font-family: $montserrat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $montserrat;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 27px;
+}
+
+h3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    @include hover;
+    color: $green;
+}
+
+p {
+    font-family: $open;
+    font-weight: 300;
+}
+
+::-moz-selection, ::selection {
+    background: none;
+    color: $green;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+.open {
+    font-family: $open;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#about, #services, #testimonials, #faq {
+    text-align: center;
+
+    .row {
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    h4 {
+        padding-bottom: 30px;
+    }
+}
+
+#services, #testimonials, #faq {
+    .row {
+        padding: 50px 0 50px;
+    }
+}

@@ -1,0 +1,49 @@
+<div id="service">
+    <div class="jumbotron text-center">
+        <h1>Select your services.</h1>
+        <h3>We'll keep track of the time your appointment will take.</h3>
+
+        <div ng-controller="servicesController as serviceCtrl" ng-init="totalHours = 0">
+            <div class="content">
+                <div class="container clearfix">
+                    <div class="row row-centered">
+                        <div ng-repeat="service in serviceCtrl.service">
+                            <div class="medium-4 columns">
+                                <div class="selection-highlights">
+                                    <input class="selection-checkbox" type="checkbox" id="selection-check-{{service.idName}}" ng-model="service.selected" />
+                                    <div class="selection-highlight"></div>
+                                </div>
+                                <div class="selection-content">
+                                    <label class="selection-item" for="selection-check-{{service.idName}}">
+                                        <span class="selection-item-container" ng-class="{green: select.patio }">
+                                            <i class="fa {{service.icon}}">
+                                            </i>
+                                            <br />{{service.name}}
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-centered">
+                        <div class="medium-8 col-centered">
+                            <p>We estimate this will take <u><b>{{serviceCtrl.calculateHours()}}</b></u> hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#quote" ng-show="serviceCtrl.calculateHours() > 0">Next</a>
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800" height="0">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -6" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop" result="goo" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+#schedule {
+    .selection-item-container {
+        vertical-align: top;
+        height: 100px;
+    }
+
+    .selection-highlight, .selection-item {
+        height: 100px;
+    }
+
+    .row-centered {
+        margin: 0;
+    }
+
+    ul {
+        margin-bottom: 40px;
+        list-style-type: none;
+    }
+
+    li {
+        cursor: pointer;
+        color: $gray;
+    }
+
+    li:hover {
+        color: $green;
+    }
+}

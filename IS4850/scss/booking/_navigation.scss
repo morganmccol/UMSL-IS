@@ -1,0 +1,55 @@
+nav {
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    .nav-booking {
+        list-style: none;
+        margin-top: 100px;
+        padding: 0;
+        width: 100%;
+
+        li {
+            float: right;
+            position: relative;
+            padding: 20px 15px;
+        }
+
+        li a {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: $gray;
+            opacity: 1;
+            text-decoration: none;
+            line-height: 80px;
+        }
+
+        li a:hover {
+            color: $green;
+        }
+
+        .fa {
+            font-size: 27px;
+        }
+
+        .active {
+            color: $green;
+        }
+
+        span {
+            vertical-align: top;
+            line-height: 6;
+        }
+
+        li {
+            float: left;
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div id="location">
+    <div class="jumbotron text-center">
+        <h1>Located in our service area?</h1>
+        <h3>We provide washes to Saint Louis and Illinois. Find out if you're included below.</h3>
+
+        <form ng-controller="MainCtrl">
+            <span class="input" ng-class="{filled: focus}">
+                <input class="input-field" type="text" id="location-input" ng-model="focus" />
+                <label class="input-label" for="location-input">
+                    <span class="input-content">Enter your zip code</span>
+                </label>
+            </span>
+        </form>
+
+        <!--<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>-->
+    </div>
+</div>

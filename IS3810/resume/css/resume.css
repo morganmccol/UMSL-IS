@@ -1,0 +1,340 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arvo,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    color: #fff;
+    background-color: #AEB0D9;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+h5, h6 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+a {
+    color: #fff;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #11505d;
+}
+
+/* Navigation Bar */
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    text-transform: uppercase;
+    font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: #000;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li.active {
+    outline: nonte;
+    background-color: rgba(255,255,255,.3);
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.3);
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #000;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+}
+
+.arrow {
+  margin-top: 7px;
+  font-size: 24px;
+  color: rgba(287,204,221,1);
+}
+
+/* Jumbotron */
+.jumbotron {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 80px 0;
+  text-align: center;
+  color: #fff;
+  background: url(../img/oregon.jpg) no-repeat bottom center scroll;
+  background-color: #AEB0D9;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.jumbotron .jumbotron-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.jumbotron .jumbotron-body .jumbotron-title {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.jumbotron .jumbotron-body .jumbotron-text {
+    font-size: 28px;
+}
+
+@media(min-width:767px) {
+    .jumbotron {
+        height: 100%;
+        padding: 0;
+    }
+
+    .jumbotron .jumbotron-body .jumbotron-title {
+        font-size: 100px;
+    }
+
+    .jumbotron .jumbotron-body .jumbotron-text {
+        font-size: 25px;
+    }
+}
+
+/* Courses */
+.row {
+  margin: 0;
+}
+
+#mis-courses, #ratings {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.course .completed {
+  color: #222;
+  background: rgba(255,255,255,.6);
+  border-spacing: 2px;
+  border-bottom: 1px;
+}
+
+.in-progress {
+  color: #222;
+  background: rgba(255,255,255,.4);
+  border-spacing: 2px;
+  border-bottom: 1px;
+}
+
+.current .item {
+  background: rgba(227,204,221,.9);
+}
+
+.item .course-name {
+  text-align: left; 
+  width: auto;
+}
+
+.item .course-year {
+  text-align: center; 
+}
+
+.item .course-grade {
+  text-align: center; 
+}
+
+.gpa {
+  margin-top: 15px;
+}
+
+/* Experience */
+#experience, #contact {
+    background-color: #fff;
+    color: #707991;
+    text-align: center;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+/* Buttons */
+.btn {
+    text-transform: uppercase;
+    font-family: Quicksand,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    font-size: 90px;
+}
+
+.exp-btn {
+  font-size: 80px;
+}
+
+.computer-btn {
+  margin-top: 30px;
+}
+
+.work-btn {
+  margin-top: 70px;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #707991;
+    outline: 0;
+    color: #fff;
+    background-color: #707991;
+}
+
+.rating-num {
+  font-weight: 700;
+  font-size: 48px;
+  color: rgba(287,204,221,1);
+}
+
+.rating-str {
+  font-weight: 300;
+  font-size: 22px;
+  color: rgba(287,204,221,1);
+}
+
+/* Carousel */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.rating {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-rating {
+    display: block;
+}
+
+.rating-nav {
+  text-align: center;
+}
+
+.arrow-prev {
+  margin-right: 45px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 40px;
+}
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 40px;
+}
+
+.arrow-next:hover, .arrow-next:focus,
+.arrow-prev:hover, .arrow-prev:focus {
+    outline: 0;
+    color: #707991;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.slider-dots li {
+  color: #fff;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+  color: #707991;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}

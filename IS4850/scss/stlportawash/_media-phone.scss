@@ -1,0 +1,59 @@
+@media #{$small-only} {
+    .orbit-container {
+        display: none;
+    }
+
+    .off-canvas-fixed {
+        -webkit-transition: -webkit-transform 500ms ease;
+        transition: transform 500ms ease;
+    }
+
+    .move-right > .off-canvas-fixed {
+        height: 100%;
+        -webkit-transform: translate3d(15.625rem, 0, 0);
+        transform: translate3d(15.625rem, 0, 0);
+    }
+
+    #about {
+        margin-top: 40px;
+
+        .row {
+            padding-top: 0;
+        }
+    }
+
+    #services {
+        h4 {
+            padding-bottom: 0;
+        }
+
+        .pricing {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    #testimonials {
+        h5 {
+            padding: 10px 0 20px;
+        }
+    }
+
+    #faq {
+        .accordian {
+            a {
+                padding-right: 20px;
+            }
+        }
+
+        [id*="open-accordion"], [id*="close-accordion"] {
+            border-bottom: 2px solid #fff;
+            height: auto;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+}
